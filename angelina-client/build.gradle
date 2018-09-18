@@ -1,0 +1,23 @@
+plugins {
+    id 'java'
+}
+
+group 'de.felixklauke.angelina'
+version '1.0-SNAPSHOT'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+
+    compileOnly 'org.projectlombok:lombok:1.18.2'
+
+    apt 'org.projectlombok:lombok:1.18.2'
+
+    compile 'com.squareup.retrofit2:retrofit:2.4.0'
+
+    compile 'com.squareup.retrofit2:converter-gson:2.1.0'
+}

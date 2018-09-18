@@ -1,3 +1,4 @@
 rootProject.name = 'angelina'
 include 'angelina-core'
+include 'angelina-client'
 

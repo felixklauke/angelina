@@ -15,11 +15,5 @@ repositories {
 
 dependencies {
 
-    compileOnly 'org.projectlombok:lombok:1.18.2'
 
-    apt 'org.projectlombok:lombok:1.18.2'
-
-    compile 'com.squareup.retrofit2:retrofit:2.4.0'
-
-    compile 'com.squareup.retrofit2:converter-gson:2.1.0'
 }
