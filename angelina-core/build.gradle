@@ -1,5 +1,7 @@
 plugins {
     id 'java'
+
+    id 'net.ltgt.apt' version '0.10'
 }
 
 group 'de.felixklauke.angelina'
@@ -12,5 +14,12 @@ repositories {
 }
 
 dependencies {
-    testCompile group: 'junit', name: 'junit', version: '4.12'
+
+    compileOnly 'org.projectlombok:lombok:1.18.2'
+
+    apt 'org.projectlombok:lombok:1.18.2'
+
+    compile 'com.squareup.retrofit2:retrofit:2.4.0'
+
+    compile 'com.squareup.retrofit2:converter-gson:2.1.0'
 }
