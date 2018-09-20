@@ -5,4 +5,5 @@ package de.felixklauke.angelina.core;
  */
 public class AngelinaCore {
 
+
 }

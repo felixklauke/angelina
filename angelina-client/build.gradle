@@ -1,5 +1,7 @@
 plugins {
     id 'java'
+
+    id 'net.ltgt.apt' version '0.10'
 }
 
 group 'de.felixklauke.angelina'
@@ -20,4 +22,8 @@ dependencies {
     compile 'com.squareup.retrofit2:retrofit:2.4.0'
 
     compile 'com.squareup.retrofit2:converter-gson:2.1.0'
+
+    compile 'com.squareup.okhttp3:logging-interceptor:3.5.0'
+
+    compile project(":angelina-api")
 }
