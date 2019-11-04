@@ -38,7 +38,7 @@ allprojects {
         /**
          * JUnit Jupiter parameter configuration.
          */
-        testCompile group: 'org.junit.jupiter', name: 'junit-jupiter-params', version: '5.2.0'
+        testCompile group: 'org.junit.jupiter', name: 'junit-jupiter-params', version: '5.5.2'
 
         /**
          * JUnit Jupiter testing engine.
