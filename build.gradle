@@ -58,7 +58,7 @@ allprojects {
         /**
          * Mockito for mocking.
          */
-        testCompile group: 'org.mockito', name: 'mockito-core', version: '2.19.0'
+        testCompile group: 'org.mockito', name: 'mockito-core', version: '3.1.0'
     }
 
     test {
