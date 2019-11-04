@@ -33,7 +33,7 @@ allprojects {
         /**
          * JUnit Jupiter as a testing framework.
          */
-        testCompile group: 'org.junit.jupiter', name: 'junit-jupiter-api', version: '5.2.0'
+        testCompile group: 'org.junit.jupiter', name: 'junit-jupiter-api', version: '5.5.2'
 
         /**
          * JUnit Jupiter parameter configuration.
