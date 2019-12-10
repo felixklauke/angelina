@@ -43,7 +43,7 @@ allprojects {
         /**
          * JUnit Jupiter testing engine.
          */
-        testCompile group: 'org.junit.jupiter', name: 'junit-jupiter-engine', version: '5.2.0'
+        testCompile group: 'org.junit.jupiter', name: 'junit-jupiter-engine', version: '5.5.2'
 
         /**
          * Vintage platform engine.
