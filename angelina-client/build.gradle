@@ -11,7 +11,7 @@ repositories {
 
 dependencies {
 
-    compileOnly 'org.projectlombok:lombok:1.18.8'
+    compileOnly 'org.projectlombok:lombok:1.18.10'
     annotationProcessor 'org.projectlombok:lombok:1.18.8'
 
     compile 'com.squareup.retrofit2:retrofit:2.7.0'
