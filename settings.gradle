@@ -1,4 +1,12 @@
+plugins {
+  id "com.gradle.enterprise" version "3.1"
+}
+
 rootProject.name = 'angelina'
+
+include 'angelina-core'
+include 'angelina-client'
+include 'angelina-api'
 
 rootProject.children.each { project ->
     project.buildFileName = "${project.name}.gradle"
@@ -6,8 +14,4 @@ rootProject.children.each { project ->
     assert project.buildFile.exists()
     assert project.buildFile.isFile()
 }
-
-include 'angelina-core'
-include 'angelina-client'
-include 'angelina-api'
 

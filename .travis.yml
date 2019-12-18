@@ -19,7 +19,7 @@ notifications:
 ### Actual Build Script ###
 ###########################
 script:
-  - ./gradlew build check
+  - ./gradlew build check --scan
   - ./gradlew codeCoverageReport
 
 ###################################

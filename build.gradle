@@ -1,6 +1,11 @@
 group 'de.felixklauke.angelina'
 version '2.0.0-SNAPSHOT'
 
+buildScan {
+  termsOfServiceUrl = 'https://gradle.com/terms-of-service'
+  termsOfServiceAgree = 'yes'
+}
+
 allprojects {
     apply plugin: 'java'
     apply plugin: 'maven'
