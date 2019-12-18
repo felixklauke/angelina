@@ -15,12 +15,22 @@ jdk:
 notifications:
   email: false
 
+#################
+### SonarQube ###
+#################
+addons:
+  sonarcloud:
+    organization: "felixklauke"
+    token:
+      secure: KBL0EBYkKm6chmXznWu4WXECa84QLwcSQfR+wZhqsQnjhyCWZ+ygVVYNarns6kxrn7DaNYlWybRxk/Nz+I8MYpAxcIa+hJknhPJ29DD0Q5P6XrCxQISHssUCGfK3iT11kyDC5ZIyYYh+MwKmP/2EkxdZBdrefVDb0NlEGXO61Yvv/L/QRQkWjupPP0/0YKeqLLjeALC3Uu79Wu4AreED/amYNd50FTS/Lbns9aBmR1WjQlcthNHlCq+Nk0ASyxQwplEbo4dYuMWkl8TcTUd3GiosUqfcu0vLFY02vw4NJj6XLzFc2glYWGOVnBEnkp7LSIQ9kjiBPzOK+1NH6afoy90m7NHecEI+RCuxnEbdH8B0gAsJ6/ds8H6QEVnHskIiRrocP8c6ztT132GZPNV/hqjQ9M9vtWu8J1/mUp7YDgSRYymU+Y01ypwBOANZUGXeQeG7Cb3pONEBZQQk7KEQb3t11Q+rTs8jhztPAYvfw4HkDv/vMM6NW03KgXi8CUgG0iq5sL7WUITDQBBo98hg6leHk7nq7Se/iDTSjZGVAd65sSjGyY5D5fPDucOmeyb51VaVpNc6P6XHZwZcL9zuHbljIXT82+I7dHEgw5X0DbWo2tZzpBV8SY17v0K9GvzveBzVtc7aHsgyvPkGGbNA+I6Nnd+AXh4iE1tLZIkUMvw=
+
 ###########################
 ### Actual Build Script ###
 ###########################
 script:
   - ./gradlew build check --scan
   - ./gradlew codeCoverageReport
+  - ./gradlew sonarqube
 
 ###################################
 ### Upload Code Coverage Report ###
