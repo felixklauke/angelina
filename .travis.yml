@@ -32,6 +32,15 @@ script:
   - ./gradlew codeCoverageReport
   - ./gradlew sonarqube
 
+##################
+### Deployment ###
+##################
+deploy:
+  provider: script
+  script: ./gradlew publish
+  on:
+    tags: true
+
 ###################################
 ### Upload Code Coverage Report ###
 ###################################
