@@ -1,0 +1,22 @@
+plugins {
+    id 'java'
+}
+
+group 'de.felixklauke.angelina'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+
+    compileOnly 'org.projectlombok:lombok:1.18.10'
+    annotationProcessor 'org.projectlombok:lombok:1.18.8'
+
+    compile 'com.squareup.retrofit2:retrofit:2.7.0'
+    compile 'com.squareup.retrofit2:converter-gson:2.7.0'
+    compile 'com.squareup.okhttp3:logging-interceptor:4.2.2'
+
+    compile project(":angelina-api")
+}
