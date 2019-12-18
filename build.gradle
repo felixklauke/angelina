@@ -13,6 +13,7 @@ buildScan {
 allprojects {
   apply plugin: 'java'
   apply plugin: 'maven'
+  apply plugin: 'maven-publish'
   apply plugin: 'checkstyle'
   apply plugin: 'jacoco'
 
@@ -64,6 +65,24 @@ task codeCoverageReport(type: JacocoReport) {
   dependencies {
     subprojects {
       test
+    }
+  }
+
+  publishing {
+    repositories {
+      maven {
+        name = "GitHubPackages"
+        url = uri("https://maven.pkg.github.com/FelixKlauke/angelina")
+        credentials {
+          username = project.findProperty("gpr.user") ?: System.getenv("USERNAME")
+          password = project.findProperty("gpr.key") ?: System.getenv("PASSWORD")
+        }
+      }
+    }
+    publications {
+      gpr(MavenPublication) {
+        from(components.java)
+      }
     }
   }
 }
