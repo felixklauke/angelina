@@ -5,9 +5,9 @@ package de.felixklauke.angelina.api.auth;
  */
 public interface Authentication {
 
-    String getUserName();
+  String getUserName();
 
-    String getCSRFToken();
+  String getCSRFToken();
 
-    String getTicket();
+  String getTicket();
 }
